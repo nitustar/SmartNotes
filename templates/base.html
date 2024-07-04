@@ -4,11 +4,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/post-it.png' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
-<body>
+<body id="bg" style="background-image: url('{% static "images/notes.jpg"%}'); background-repeat: no-repeat; background-size: cover">
 <nav class="navbar navbar-dark bg-dark">
     <div class="ms-auto">
         {% if user.is_authenticated %}

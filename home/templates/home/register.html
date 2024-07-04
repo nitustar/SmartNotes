@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
-
+{% block title %}
+    SignUp
+{% endblock %}
 {% block content %}
     <form method="post" style="text-align: left; margin: 0 auto; width: 600px;">
         {% csrf_token %}
