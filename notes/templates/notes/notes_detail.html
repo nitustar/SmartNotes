@@ -5,10 +5,9 @@
 {% block content %}
 
     <div class="border border-3 rounded-pill">
-
-        <h1 class="my-5">{{ note.title }}</h1>
-        <p class="text-success">{{ note.text }}</p>
-    
+        <div><h1 class="my-5">{{ note.title }}</h1>
+            <div style="white-space: pre-wrap;" class="text-success">{{ note.text|linebreaksbr }}</div>
+        </div>
     </div>
 
 <a href="{% url 'notes.list' %}" class="btn btn-secondary my-5">Back</a>
